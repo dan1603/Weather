@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="DetailActivityBinding">
+        <variable name="data" type="com.kalashnyk.denys.sweather.presentation.activities.detail.DetailViewDataModel"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/rvWeatherData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/ivStateEmptyOrError"
+                android:layout_width="@dimen/viewparams_150"
+                android:layout_height="@dimen/viewparams_150"/>
+
+        <ProgressBar
+                android:id="@+id/progress"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="WeatherDataBinding">
+        <variable name="weather"
+                  type="com.kalashnyk.denys.sweather.repository.model.WeatherData"/>
+    </data>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/viewparams_1"
+              android:background="@color/colorBlack"/>
+
+        <TextView
+                android:id="@+id/tvWeatherDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewparams_50"
+                android:paddingStart="@dimen/indentation_16"
+                android:paddingEnd="@dimen/indentation_16"
+                android:gravity="start|center_vertical"
+                android:text="@{weather.date}"
+                android:background="@color/colorWeatherDay"
+                android:focusable="true"
+                android:clickable="true"
+                android:textSize="@dimen/txt_size_20"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/rvData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>

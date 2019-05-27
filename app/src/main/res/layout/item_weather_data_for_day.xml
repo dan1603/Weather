@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="data"
+                  type="com.kalashnyk.denys.sweather.repository.model.WeatherForDay"/>
+    </data>
+
+    <RelativeLayout
+            android:background="@color/colorWeatherHoursForDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tvDayTime"
+                android:layout_marginTop="@dimen/indentation_10"
+                android:layout_marginBottom="@dimen/indentation_10"
+                android:layout_marginEnd="@dimen/indentation_10"
+                android:layout_marginStart="@dimen/indentation_16"
+                android:text="@{data.hourData}"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_size_20"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tvDayStatus"
+                android:layout_marginTop="@dimen/indentation_10"
+                android:layout_marginBottom="@dimen/indentation_10"
+                android:layout_marginEnd="@dimen/indentation_16"
+                android:layout_marginStart="@dimen/indentation_16"
+                android:layout_alignParentEnd="true"
+                android:text="@{data.description}"
+                android:textSize="@dimen/txt_size_18"
+                android:textColor="@color/colorBlackBluer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tvDayTemp"
+                android:layout_marginTop="@dimen/indentation_10"
+                android:layout_marginBottom="@dimen/indentation_10"
+                android:layout_marginEnd="@dimen/indentation_16"
+                android:layout_marginStart="@dimen/indentation_16"
+                android:layout_below="@+id/tvDayStatus"
+                android:text="@{String.format(@string/temperature_mask, data.temperature)}"
+                android:textSize="@dimen/txt_size_18"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tvDayWind"
+                android:layout_marginTop="@dimen/indentation_10"
+                android:layout_marginBottom="@dimen/indentation_10"
+                android:layout_marginEnd="@dimen/indentation_10"
+                android:layout_marginStart="@dimen/indentation_16"
+                android:layout_alignParentEnd="true"
+                android:text="@{String.format(@string/wind_mask, data.windSpeed)}"
+                android:textSize="@dimen/txt_size_18"
+                android:layout_below="@+id/tvDayStatus"
+                android:textColor="@color/colorBlackBluer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/viewparams_1"
+              android:background="@color/colorBlack"/>
+
+    </RelativeLayout>
+</layout>

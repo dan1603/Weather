@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">sWeather</string>
+    <string name="EXTRAS_ID">ID</string>
+    <string name="error_empty_list">List is empty</string>
+    <string name="new_dialog_title">New city</string>
+    <string name="new_dialog_message">Enter the name of your city</string>
+    <string name="new_dialog_btn_positive">Add</string>
+    <string name="new_dialog_btn_negative">Cancel</string>
+    <string name="temperature_mask">Temp: %s F</string>
+    <string name="wind_mask">Wind sp: %s m/s</string>
+
+    <string-array name="default_cities">
+        <item>Kiev</item>
+        <item>London</item>
+        <item>Moscow</item>
+    </string-array>
+
+</resources>
